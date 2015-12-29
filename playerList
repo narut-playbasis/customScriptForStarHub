@@ -1,7 +1,11 @@
-name:Asoke,id:567c06275e232a194f8b5757,player_id:am1
-name:Ocean Tower 2,id:567c06a95e232a214f8b583c,player_id:sm2
-name:Lotus Onnut,id:567c06b85e232a194f8b582c,player_id:sm3
-name:Bangkok,id:567c05705e232a214f8b563e,player_id:dm1
-name:Bic C Onnut,id:567c06ca5e232a214f8b5874,player_id:sm4
-name:Onnut,id:567c063e5e232a194f8b5766,player_id:am2
-name:Terminal21,id:567c069c5e232a194f8b57fe,player_id:sm1
+name:Asoke,id:567788d8bffebc3a078b4567,player_id:am1
+name:Bangkok,id:567788bdbffebc38078b4568,player_id:dm1
+name:Lotus Onnut,id:5678cf32bffebc92068b456c,player_id:sm3
+name:Big C Onnut,id:5678cf4dbffebc84068b4575,player_id:sm4
+name:HTTI,id:567789e7bffebc3c078b4568,player_id:sm6
+name:Ocean Tower 2,id:567789c5bffebc3c078b4567,player_id:sm2
+name:Onnut,id:5678cee0bffebc92068b456b,player_id:am2
+name:Pathum,id:567788febffebc39078b4568,player_id:dm2
+name:TU,id:56778993bffebc3a078b4569,player_id:sm5
+name:Terminal21,id:56778967bffebc3a078b4568,player_id:sm1
+name:rangsit,id:5677892ebffebc39078b4569,player_id:am3
