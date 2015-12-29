@@ -1,9 +1,12 @@
 var http;
+var url_title;
 if (process.env.API_SERVER_HTTPS == 1){
 	http = require('https');
+	url_title = "https://";
 }
 else{
 	http = require('http');
+	url_title = "http://";
 }
 
 var data = '';
@@ -15,7 +18,7 @@ var path = '/StoreOrg/nodes';
 
 
 //console.log("http://" + host + path + "?api_key=" + apiKey);
-http.get("http://" + host + path + "?api_key=" + apiKey, function(res) {
+http.get(url_title + host + path + "?api_key=" + apiKey, function(res) {
 	//console.log("Got response: " + res.statusCode);
 	res.setEncoding('utf8');
 	data = '';

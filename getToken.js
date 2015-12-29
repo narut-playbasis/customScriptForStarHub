@@ -1,23 +1,25 @@
 var http;
 if (process.env.API_SERVER_HTTPS == 1){
 	http = require('https');
+	//console.log("https");
 }
 else{
 	http = require('http');
+	//console.log("http");
 }
-
 var querystring = require('querystring');
 
-var api_key = 'api_key' | process.env.API_KEY;
-var api_secret = 'api_secret' | process.env.API_SECRET;
+var api_server = process.env.API_SERVER;
+var api_key = process.env.API_KEY;
+var api_secret = process.env.API_SECRET;
 var data = '';
 var testjson = {
-  'api_key' : '2683567003',
-  'api_secret' : 'a27624468a30e220076cb5c3d037c420' 
+  'api_key' : api_key,
+  'api_secret' : api_secret 
 }
 var postData = querystring.stringify(testjson);
 var options = {
-  hostname: 'api.app',
+  hostname: api_server,
   path: '/Auth',
   method: 'POST',
   headers: {
@@ -26,19 +28,20 @@ var options = {
   }
 };
 
-
+//console.log("api_key = " + api_key);
+//console.log("api_secret = " + api_secret);
 
 // ***************************  Auth **************************************************//
 
 function auth(){
 	
-	var req = require('http').request(options, function(res) {
+	var req = http.request(options, function(res) {
 		//console.log('STATUS: ' + res.statusCode);
 		//console.log('HEADERS: ' + JSON.stringify(res.headers));
 		res.setEncoding('utf8');
 		res.on('data', function (chunk) {
 			data += chunk;
-			//console.log('BODY: ' + chunk);
+		    //console.log('BODY: ' + chunk);
 		});
 		res.on('end', function() {
 			var obj = JSON.parse(data);

@@ -19,7 +19,7 @@ var token = 'aaaaaaaaa';
 var api_server = process.env.API_SERVER;
 var testjson = {
   'token' : token,
-  'itemId' : 'sim1',
+  'item_id' : 'sim1',
   'action': 'sell',
   'amount': 50,
   'player_id' : 'test01',    

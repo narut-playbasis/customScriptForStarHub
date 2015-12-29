@@ -1,9 +1,12 @@
 var http;
+var url_title;
 if (process.env.API_SERVER_HTTPS == 1){
 	http = require('https');
+	url_title = "https://";
 }
 else{
 	http = require('http');
+	url_title = "http://";
 }
 var data = '';
 var id_array = [];
@@ -36,7 +39,7 @@ for (i in id_array){
 	getRequestPlayers(id_array[i], names_array[i]);
 }
 function getRequestPlayers (id, name){
-	http.get("http://" + host + path + id +"?api_key=" + apiKey + role, function(res) {
+	http.get(url_title + host + path + id +"?api_key=" + apiKey + role, function(res) {
 		res.setEncoding('utf8');
 		data = '';
 		res.on('data', function (chunk) {
