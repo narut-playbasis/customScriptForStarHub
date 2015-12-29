@@ -1,13 +1,13 @@
-custom script for starhub project
+#custom script for starhub project
 
-Requirement 
+#Requirement 
 1. Node js 
 
 
-Note : 
+#Note : 
 1. action is set to sell 
 2. parameter may change in parseData.js
 
-TODO: 
+#TODO: 
 
 modify parseData to real input file from StarHub
