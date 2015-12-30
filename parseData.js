@@ -17,10 +17,13 @@ var playerList_file_name = process.env.PLAYER_LIST_FILE_NAME;
 var input_file_name = process.env.INPUT_FILE_NAME
 var token = 'aaaaaaaaa';
 var api_server = process.env.API_SERVER;
+var action_name = process.env.ACTION_NAME
+var item_name = 'sim1';
+var parameter_name = 'itemId';
 var testjson = {
   'token' : token,
-  'itemId' : 'sim1',
-  'action': 'sell',
+  parameter_name : item_name,
+  'action': action_name,
   'amount': 50,
   'player_id' : 'test01',    
 }
@@ -55,7 +58,7 @@ for(i in players_file) {
 	}
 }
 for (i in store_id_array){
-	console.log("Id : " + store_id_array[i] + " Name : " + store_name_array[i]+ " Player id : " + cl_player_id_array[i]);	
+	//console.log("Id : " + store_id_array[i] + " Name : " + store_name_array[i]+ " Player id : " + cl_player_id_array[i]);	
 }
 function getPlayerIdByStoreName (store_name){
 	for (n in store_id_array){
@@ -74,7 +77,7 @@ var input_file = fs.readFileSync(input_file_name).toString().split("\n");
 for (line in input_file){
 	
 	var input_line = input_file[line].split(",");
-	console.log("Line : " +input_line);
+	//console.log("Line : " +input_line);
 	var player_id;
 	var amount;
 	var date="now";
@@ -88,8 +91,12 @@ for (line in input_file){
 			date = sub_array[1];
 		}	
 	}	
-	console.log("player_id : " + player_id + " amount : " + amount + " date : " + date);
-	engine_rule(player_id,amount, date);
+	var str = "action:"+action_name+","+"player_id:" + player_id + ","+parameter_name+":"+item_name+","+ "amount:" + amount + ","+"date:" + date;
+	console.log(str);
+	if (process.env.GEN_CSV_ONLY != 1){
+		engine_rule(player_id,amount, date);
+	}
+	
 }
 
 
