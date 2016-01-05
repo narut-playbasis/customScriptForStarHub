@@ -1,2 +1,2 @@
-store:Terminal21,amount:20,date:now
+store:Terminal21,amount:20,date:1-1-2016
 store:Big C Onnut,amount:10,date:now

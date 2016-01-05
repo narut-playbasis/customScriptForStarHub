@@ -1,2 +1,8 @@
-action:sell,player_id:sm1,itemId:sim1,amount:20,date:now
+action:sell,player_id:sm1,itemId:sim1,amount:20,date:1-1-2016
+action:acc,player_id:sm1
+action:acc,player_id:am1
+action:acc,player_id:dm1
 action:sell,player_id:sm4,itemId:sim1,amount:10,date:now
+action:acc,player_id:sm4
+action:acc,player_id:am2
+action:acc,player_id:dm1

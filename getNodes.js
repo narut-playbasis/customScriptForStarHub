@@ -34,13 +34,24 @@ http.get(url_title + host + path + "?api_key=" + apiKey, function(res) {
 	//console.log('response: ' + results);
 	for (var key in results){
 		var result = results[key];
+		var msg_to_print = '';
+		var in_org = false;
 		for (var attr_name in result ){
 			if (attr_name == "name" || attr_name == "_id")
 			{
-				process.stdout.write(attr_name + ":" + result[attr_name]+",");
+				msg_to_print += attr_name + ":" + result[attr_name]+",";
+				//process.stdout.write(attr_name + ":" + result[attr_name]+",");
+			}
+			else if (attr_name == "parent"){
+				msg_to_print += 'parent' + ":" + result[attr_name]['name']+",";
+				in_org = true;
+				//process.stdout.write('parent' + ":" + result[attr_name]['name']+",");
 			}
 		}
-		console.log("");
+		if (in_org){
+			console.log(msg_to_print);
+		}
+		
 	}
 });
   
