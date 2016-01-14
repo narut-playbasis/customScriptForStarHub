@@ -1,2 +1,18 @@
-store:Terminal21,amount:20,date:1-1-2016
-store:Big C Onnut,amount:10,date:now
+store:1,item: STARHUB ETOP UP $8 ,amount:115
+store:1,item: STARHUB ETOP UP $17 ,amount:3
+store:1,item: STARHUB ETOP UP $18 ,amount:30
+store:1,item: STARHUB ETOP UP $28 ,amount:10
+store:2,item: STARHUB ETOP UP $8 ,amount:86
+store:2,item: STARHUB ETOP UP $17 ,amount:5
+store:2,item: STARHUB ETOP UP $18 ,amount:25
+store:2,item: STARHUB ETOP UP $28 ,amount:6
+store:3,item: STARHUB ETOP UP $8 ,amount:63
+store:3,item: STARHUB ETOP UP $17 ,amount:4
+store:3,item: STARHUB ETOP UP $18 ,amount:14
+store:3,item: STARHUB ETOP UP $28 ,amount:6
+store:3,item: STARHUB ETOP UP $50 ,amount:1
+store:4,item: STARHUB ETOP UP $8 ,amount:209
+store:4,item: STARHUB ETOP UP $17 ,amount:3
+store:4,item: STARHUB ETOP UP $18 ,amount:87
+store:4,item: STARHUB ETOP UP $28 ,amount:43
+store:4,item: STARHUB ETOP UP $50 ,amount:5

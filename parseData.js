@@ -16,12 +16,11 @@ var player_id_for_acc_array = [];
 
 var token_file_name = process.env.TOKEN_FILE_NAME;
 var playerList_file_name = process.env.PLAYER_LIST_FILE_NAME;
-var input_file_name = process.env.INPUT_FILE_NAME
+var input_file_name = process.env.CSV_TO_TEXT_FILE_NAME
 var token = 'aaaaaaaaa';
 var api_server = process.env.API_SERVER;
 var action_name = process.env.ACTION_NAME
 var acc_action_name = process.env.ACC_ACTION_NAME;
-var item_name = 'sim1';
 var parameter_name = 'itemId';
 var testjson = {
   'token' : token,
@@ -109,6 +108,7 @@ for (line in input_file){
 	//console.log("Line : " +input_line);
 	var player_id;
 	var amount;
+	var item_name;
 	var date="now";
 	player_id_for_acc_array = [];
     for(j in input_line) {
@@ -120,7 +120,9 @@ for (line in input_file){
 			amount = sub_array[1];
 		}else if (sub_array[0] == "date"){
 			date = sub_array[1];
-		}	
+		}else if (sub_array[0] == "item"){
+			item_name = sub_array[1];
+		}
 	}	
 	
 	var str = "action:"+action_name+","+"player_id:" + player_id + ","+parameter_name+":"+item_name+","+ "amount:" + amount + ","+"date:" + date;
