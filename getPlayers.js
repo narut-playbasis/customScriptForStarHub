@@ -37,10 +37,9 @@ for(i in array_file) {
 			
 	}
 }
-for (i in id_array){
-	//console.log("Id : " + id_array[i] + " Name : " + names_array[i] + " Parent : " + parent_array[i]);
-	getRequestPlayers(id_array[i], names_array[i], parent_array[i]);
-}
+var index = 0;
+
+getRequestPlayers(id_array[index], names_array[index], parent_array[index]);
 function getRequestPlayers (id, name, parent_name){
 	http.get(url_title + host + path + id +"?api_key=" + apiKey + role, function(res) {
 		res.setEncoding('utf8');
@@ -57,6 +56,10 @@ function getRequestPlayers (id, name, parent_name){
 		//console.log( name + ' response: ' + results);
 		for (var k in results){
 			console.log("name:"+name+",id:"+id + ",player_id:" + results[k]['player_id']+ ",parent:" + parent_name);
+            index++
+            if (index < id_array.length){
+                getRequestPlayers(id_array[index], names_array[index], parent_array[index]);
+            }
 		}
 	
 

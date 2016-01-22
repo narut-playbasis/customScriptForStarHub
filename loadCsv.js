@@ -33,7 +33,7 @@ require("csv-to-array")({
                 var total = parseInt(str);
                 if (total > 0){
                     //console.log("total = "+total+" price per item = "+ itemList_price[i]);
-                    amountList[itemList_price[i]] = total/itemList_price[i];
+                    amountList[itemList_price[i]] = total;
                 }
                 else{
                     continue;
