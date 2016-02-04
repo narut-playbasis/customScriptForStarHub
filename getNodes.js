@@ -42,6 +42,11 @@ http.get(url_title + host + path + "?api_key=" + apiKey, function(res) {
 				msg_to_print += attr_name + ":" + result[attr_name]+",";
 				//process.stdout.write(attr_name + ":" + result[attr_name]+",");
 			}
+			else if (attr_name == "organize")
+			{
+				msg_to_print += 'organize' + ":" + result[attr_name]['name']+",";
+				//process.stdout.write(attr_name + ":" + result[attr_name]+",");
+			}
 			else if (attr_name == "parent"){
 				msg_to_print += 'parent' + ":" + result[attr_name]['name']+",";
 				in_org = true;
