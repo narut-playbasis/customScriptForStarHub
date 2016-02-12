@@ -40,7 +40,7 @@ require("csv-to-array")({
                 }
             }
             for (var j in amountList){
-                console.log("store:"+ storeName + ",item:"+ array[0][j] + ",amount:" + amountList[j]);
+                console.log("store:"+ storeName + ",item:"+ array[0][j] + ",amount:" + amountList[j]+",price:"+j);
             }
         }
     }

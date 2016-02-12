@@ -31,5 +31,5 @@ node getPlayers.js >> %PLAYER_LIST_FILE_NAME%
 IF %GEN_CSV_ONLY%==1 (
     node parseData.js >> %OUTPUT_CSV_FILE_NAME%
 ) ELSE (
-    node parseData.js
+    node parseData.js >> engine.log
 )

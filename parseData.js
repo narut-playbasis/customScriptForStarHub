@@ -150,12 +150,13 @@ else{
 
 // ***************************  Engine rule **************************************************//
 
-function engine_rule( player_id, amount,item_name, date){
+function engine_rule( player_id, amount,item_name, date, price){
 
     testjson['token'] = token;
 
     testjson['player_id'] = player_id;
     testjson['amount'] = amount;
+    testjson['price'] = price;
     testjson[parameter_name] = item_name;
     postData = querystring.stringify(testjson);
 
@@ -269,6 +270,7 @@ function readLine(index){
     var player_id = null;
     var amount = "";
     var item_name = "";
+    var price = 0;
     var date="now";
     player_id_for_acc_array = [];
     for(j in input_line) {
@@ -282,11 +284,13 @@ function readLine(index){
             date = sub_array[1];
         }else if (sub_array[0] == "item"){
             item_name = sub_array[1];
+        } else if (sub_array[0] == "price"){
+            price = sub_array[1];
         }
     }
 
     if (process.env.GEN_CSV_ONLY != 1){
-        engine_rule(player_id,amount,item_name, date);
+        engine_rule(player_id,amount,item_name, date, price);
     }
     else{
         if (player_id == null){
